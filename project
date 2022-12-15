@@ -1,0 +1,57 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+
+  char user_input;
+  do {
+    // print menu
+    cout << "**************************************" << endl;
+    cout << "*           Feed the fish            *" << endl;
+    cout << "* Please chose  an option:           *" << endl;
+    cout << "*   - L: list of available fish      *" << endl;
+    cout << "*   - R: remove fish                 *" << endl;
+    cout << "*   - F: feed fish                   *" << endl;
+    cout << "*   - q: quit                        *" << endl;
+    cout << "**************************************" << endl;
+    // get user input
+    cin >> user_input;
+
+    // choose a branch depending on the input
+    switch (user_input) {
+    case 'l':
+    case 'L':
+      cout << "This is the list of available fish:" << endl;
+      cout << "press 'S' shark" << endl;
+      cout << "press 'G' for godlfish" << endl;
+      break;
+      case 'S':
+      case 's':
+      cout << "You have picked Shark!" << endl;
+      break;
+      case 'G':
+      case 'g':
+      cout << "You have picked Goldfish" << endl;
+      break;
+    case 'r':
+    case 'R':
+    cout << "Which fish will you pick?" << endl;
+    break;
+    case 'f':
+    case 'F':
+    cout << "Yummy!! :)))" << endl;
+    break;
+    case 'q':
+    case 'Q':
+      cout << "'Sea' ya!" << endl;
+      break;
+    default:
+      cout << "Invalid choice. Please choose a character from the list" << endl;
+      break;
+    }
+
+  } while (user_input != 'q' && user_input != 'Q');
+
+  return 0;
+}
